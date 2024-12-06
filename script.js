@@ -50,6 +50,8 @@ window.addEventListener("DOMContentLoaded", (event) => {
         }, this);
     });
 
+    
+
     const J1_C1 = document.getElementById("J1_C1");
     const J1_C2 = document.getElementById("J1_C2");
     const J1_C3 = document.getElementById("J1_C3");
@@ -85,9 +87,6 @@ window.addEventListener("DOMContentLoaded", (event) => {
     const S3_C3 = document.getElementById("S3_C3");
     const S3_C4 = document.getElementById("S3_C4");
     const S3_C5 = document.getElementById("S3_C5");
-
-
-    const totalSheet = [];
 
     const GenerateBtn = document.getElementById("Run");
     
@@ -136,10 +135,14 @@ window.addEventListener("DOMContentLoaded", (event) => {
     var dlvl1 = document.getElementById("dlvl1");
     var dlvl2 = document.getElementById("dlvl2");
     var dlvl3 = document.getElementById("dlvl3");
+    var total = document.getElementById("total");
 
-
+    
     GenerateBtn.onclick = function(){
-
+        localStorage.setItem("dlvl1", dlvl1.value);
+        localStorage.setItem("dlvl2", dlvl2.value);
+        localStorage.setItem("dlvl3", dlvl3.value);
+        
         const DLVL1 = [];
         const DLVL2 = [];
         const DLVL3 = [];
@@ -374,6 +377,12 @@ window.addEventListener("DOMContentLoaded", (event) => {
         // console.log("DLVL2", DLVL2);
         // console.log("DLVL3", DLVL3);
 
+        localStorage.setItem("DLVL1", JSON.stringify(DLVL1));
+        localStorage.setItem("DLVL2", JSON.stringify(DLVL2));
+        localStorage.setItem("DLVL3", JSON.stringify(DLVL3));
+
+        
+
         
         const chooseRandom = (arr, num) => {
             const res = [];
@@ -394,9 +403,11 @@ window.addEventListener("DOMContentLoaded", (event) => {
         const randomD3 = chooseRandom(DLVL3, Math.min(DLVL3.length, dlvl3.value));
         
         const finalSheet=randomD1.concat(randomD2, randomD3);
+        window.open("test.html",'_blank');
         // console.log(finalSheet);
         displayTestData(finalSheet);
         
+
         
     }
 
@@ -488,3 +499,9 @@ window.addEventListener("DOMContentLoaded", (event) => {
           callback: sheetDataHandlerS3,
     });
 });
+
+
+function calc(){
+    total.value = Number(dlvl1.value) + Number(dlvl2.value) + Number(dlvl3.value);
+    document.getElementById("total").innerHTML = total.value;
+}
