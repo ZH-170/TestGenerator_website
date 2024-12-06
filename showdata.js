@@ -40,17 +40,16 @@ function generate(){
             return `<div class=""products>
                             <div class="content">
                                 <h3 class="No">No # ${i}</h3>
-                                <p class="year">${data_items.Year}</p>
-                                <p class="qtype">${data_items.Type}</p>
-                                <p class="chpt">Chapter ${data_items.Chapter}</p>
                                 <p class="question">${data_items.Question}</p>
     <pre>
         A ${data_items.Option_A}
         B ${data_items.Option_B}
         C ${data_items.Option_C}
         D ${data_items.Option_D}
+
+
+        
     </pre>
-                                <p class="dlvl">${data_items.Level}</p>
                             </div>
                         </div>`;
         });
