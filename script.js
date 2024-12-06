@@ -405,7 +405,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
         const finalSheet=randomD1.concat(randomD2, randomD3);
         window.open("test.html",'_blank');
         // console.log(finalSheet);
-        displayTestData(finalSheet);
+        // displayTestData(finalSheet);
         
 
         
