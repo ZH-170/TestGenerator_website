@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="getSheetData.js" type="text/javascript" defer></script>
+  <script src="script.js" type="text/javascript" defer></script>
+  <link rel="stylesheet" href="style2.css">
+
+  <title>Load Google Sheet Data using SQL Query</title>
+</head>
+
+<body>
+  <header>
+      <div class="container">
+          <nav>
+              <div class="logo">
+                  
+                  <h3>HHHS Test Generator (My Website)</h3>
+              </div>
+
+              <ul>
+                  
+              </ul>
+
+              <div class="search">
+                  <form action="#">
+                      <input type="search" placeholder="Search">
+                      <button type="button" class="btn_search">
+                          <i class="fas fa-search"></i>
+                      </button>
+                  </form>
+              </div>
+          </nav>
+          <div class="grid-container">
+              
+              <li>
+
+                <label for="dlvl1">Easy</label>
+                <input type="number" id="dlvl1"><br><br>
+                <label for="dlvl2">Medium</label>
+                <input type="number" id="dlvl2"><br><br>
+                <label for="dlvl3">Difficult</label>
+                <input type="number" id="dlvl3"><br><br>
+                <label for="total">TOTAL</label>
+                <input type="number" id="total"><br><br>
+
+                <div>
+                  <h3>Junior 1</h3>
+                  <ul class="dropboxJ1">
+                    <input type="checkbox" id="ALLJ1">
+                    <label for="ALLJ1">ALL</label><br>
+                    <input type="checkbox" id="J1_C1" class="dropboxJ1">
+                    <label for="J1_C1">Chapter 1</label><br>
+                    <input type="checkbox" id="J1_C2" class="dropboxJ1">
+                    <label for="J1_C2">Chapter 2</label><br>
+                    <input type="checkbox" id="J1_C3" class="dropboxJ1">
+                    <label for="J1_C3">Chapter 3</label><br>
+                    <input type="checkbox" id="J1_C4" class="dropboxJ1">
+                    <label for="J1_C4">Chapter 4</label><br>
+                    <input type="checkbox" id="J1_C5" class="dropboxJ1">
+                    <label for="J1_C5">Chapter 5</label><br>
+                  </ul>
+                </div>
+                
+                <div>
+                  <h3>Junior 2</h3>
+                  <ul class="dropboxJ2">
+                    <input type="checkbox" id="ALLJ2">
+                    <label for="ALLJ2">ALL</label><br>
+                    <input type="checkbox" id="J2_C1" class="dropboxJ2">
+                    <label for="J2_C1">Chapter 1</label><br>
+                    <input type="checkbox" id="J2_C2" class="dropboxJ2">
+                    <label for="J2_C2">Chapter 2</label><br>
+                    <input type="checkbox" id="J2_C3" class="dropboxJ2">
+                    <label for="J2_C3">Chapter 3</label><br>
+                    <input type="checkbox" id="J2_C4" class="dropboxJ2">
+                    <label for="J2_C4">Chapter 4</label><br>
+                    <input type="checkbox" id="J2_C5" class="dropboxJ2">
+                    <label for="J2_C5">Chapter 5</label><br>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3>Junior 3</h3>
+                  <ul class="dropboxJ3">
+                    <input type="checkbox" id="ALLJ3">
+                    <label for="ALLJ3">ALL</label><br>
+                    <input type="checkbox" id="J3_C1" class="dropboxJ3">
+                    <label for="J3_C1">Chapter 1</label><br>
+                    <input type="checkbox" id="J3_C2" class="dropboxJ3">
+                    <label for="J3_C2">Chapter 2</label><br>
+                    <input type="checkbox" id="J3_C3" class="dropboxJ3">
+                    <label for="J3_C3">Chapter 3</label><br>
+                    <input type="checkbox" id="J3_C4" class="dropboxJ3">
+                    <label for="J3_C4">Chapter 4</label><br>
+                    <input type="checkbox" id="J3_C5" class="dropboxJ3">
+                    <label for="J3_C5">Chapter 5</label><br>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3>Senior 1</h3>
+                  <ul class="dropboxS1">
+                    <input type="checkbox" id="ALLS1">
+                    <label for="ALLS1">ALL</label><br>
+                    <input type="checkbox" id="S1_C1" class="dropboxS1">
+                    <label for="S1_C1">Chapter 1</label><br>
+                    <input type="checkbox" id="S1_C2" class="dropboxS1">
+                    <label for="S1_C2">Chapter 2</label><br>
+                    <input type="checkbox" id="S1_C3" class="dropboxS1">
+                    <label for="S1_C3">Chapter 3</label><br>
+                    <input type="checkbox" id="S1_C4" class="dropboxS1">
+                    <label for="S1_C4">Chapter 4</label><br>
+                    <input type="checkbox" id="S1_C5" class="dropboxS1">
+                    <label for="S1_C5">Chapter 5</label><br>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3>Senior 2</h3>
+                  <ul class="dropboxS2">
+                    <input type="checkbox" id="ALLS2">
+                    <label for="ALLS2">ALL</label><br>
+                    <input type="checkbox" id="S2_C1" class="dropboxS2">
+                    <label for="S2_C1">Chapter 1</label><br>
+                    <input type="checkbox" id="S2_C2" class="dropboxS2">
+                    <label for="S2_C2">Chapter 2</label><br>
+                    <input type="checkbox" id="S2_C3" class="dropboxS2">
+                    <label for="S2_C3">Chapter 3</label><br>
+                    <input type="checkbox" id="S2_C4" class="dropboxS2">
+                    <label for="S2_C4">Chapter 4</label><br>
+                    <input type="checkbox" id="S2_C5" class="dropboxS2">
+                    <label for="S2_C5">Chapter 5</label><br>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3>Senior 3</h3>
+                  <ul class="dropboxS3">
+                    <input type="checkbox" id="ALLS3">
+                    <label for="ALLS3">ALL</label><br>
+                    <input type="checkbox" id="S3_C1" class="dropboxS3">
+                    <label for="S3_C1">Chapter 1</label><br>
+                    <input type="checkbox" id="S3_C2" class="dropboxS3">
+                    <label for="S3_C2">Chapter 2</label><br>
+                    <input type="checkbox" id="S3_C3" class="dropboxS3">
+                    <label for="S3_C3">Chapter 3</label><br>
+                    <input type="checkbox" id="S3_C4" class="dropboxS3">
+                    <label for="S3_C4">Chapter 4</label><br>
+                    <input type="checkbox" id="S3_C5" class="dropboxS3">
+                    <label for="S3_C5">Chapter 5</label><br>
+                  </ul>
+                </div>
+              </li>
+              
+            </div>
+      </div>
+      <button type="submit" id="Run">Generate</button>
+  </header>
+
+  <main>
+      <div class="container">
+          <div class="products_wrapper">
+            <!-- <div class=""products>
+              <div class="content">
+                <h3 class="No">No # 1</h3>
+                <p class="year">Year 1</p>
+                <p class="qtype">ABCD</p>
+                <p class="question">小威为了探究某个问题提出了一个假说并设计了一个实验，但其实验结果与假说不符合，小威该如何处理最为合适？（2020年，第1题）</p>
+                <pre>
+                  A 修改假说，重复实验
+                  B 修改实验过程，使与假说相符
+                  C 修改实验数据，使与假说相符
+                  D 重复实验，依实验结果再下结论
+                </pre>
+              </div>
+            </div> -->
+              <!-- <div class="products">
+                  <div class="content">
+                      <h3 class="title">Hello</h3>
+                      <p class="release_date">Release Date: Dec 19, 2021</p>
+                      <p class="year">Year: 2021</p>
+                      <p class="dlvl">Difficulty Level: 2</p>
+                      <p class="qtype">Question Type: 1</p>
+                  </div>
+              </div>
+              <div class="products">
+                  <div class="content">
+                      <h3 class="title">Hello</h3>
+                      <p class="release_date">Release Date: Dec 19, 2021</p>
+                      <p class="year">Year: 2021</p>
+                      <p class="dlvl">Difficulty Level: 2</p>
+                      <p class="qtype">Question Type: 1</p>
+                  </div>
+              </div>
+              <div class="products">
+                  <div class="content">
+                      <h3 class="title">Hello</h3>
+                      <p class="release_date">Release Date: Dec 19, 2021</p>
+                      <p class="year">Year: 2021</p>
+                      <p class="dlvl">Difficulty Level: 2</p>
+                      <p class="qtype">Question Type: 1</p>
+                  </div>
+              </div>
+              <div class="products">
+                  <div class="content">
+                      <h3 class="title">Hello</h3>
+                      <p class="release_date">Release Date: Dec 19, 2021</p>
+                      <p class="year">Year: 2021</p>
+                      <p class="dlvl">Difficulty Level: 2</p>
+                      <p class="qtype">Question Type: 1</p>
+                  </div>
+              </div> -->
+          </div>
+      </div>
+  </main>
+  <div id="display"></div>
+  <script src="script.js"></script>
+
+</body>
+
+</html>
