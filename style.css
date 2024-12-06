@@ -1,0 +1,174 @@
+#homepage {
+    width: 95%;
+    background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(/school.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 90vh;
+}
+
+#headings{
+    text-align: center;
+    font-size: 40px;
+    margin: 10px;
+}
+
+h2{
+    text-align: center;
+    margin: 10px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 400px 400px 400px;
+    padding: 5px;
+}
+
+.grid-item {
+    /* border:1px solid black; */
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+}
+
+#display{
+    font-size:20px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: monospace;
+}
+.container{
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header{
+    background-color: #fff;
+    padding: 1rem 0;
+    box-shadow: 1px 2px 10px #000;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    font-family: "poppins", sans-serif;
+    background-color: #ddd;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo h3{
+    font-size: 2rem;
+    margin-left: 0.5rem;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.logo img{
+    width: 20%;
+    object-fit: cover;
+}
+
+
+nav ul {
+    list-style: none;
+    background: #22438c;
+}
+
+nav ul li {
+    margin: 0 1rem;
+    display: inline-block;
+    position: relative;
+}
+
+nav ul li a{
+    display: block;
+    padding: 0.5rem 1rem;
+    border: 1px solid #2c3e50;
+    color: #fff;
+    border-radius: 5px;
+}
+
+/* product design */
+.product_wrapper{
+    display: grid;
+    /* grid-template-columns: repeat(1, 1fr); */
+    margin: 5rem 0;
+    grid-gap: 2rem;
+}
+
+.products{
+    background-color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.content{
+    padding: 1rem;
+}
+
+.content .title{
+    font-size: 2rem;
+    color: #2c3e50;
+}
+
+.content .year{
+    background-color: #2c3e50;
+    padding: 0.5rem;
+    width: 60%;
+    color: #fff;
+    margin: 0.5rem 0;
+}
+
+ul {
+    list-style: none;
+    background: #22438C;
+}
+
+ul li {
+    display: inline-block;
+    position: relative;
+}
+
+ul li a {
+    display: block;
+    padding: 20px 25px;
+    color: #FFF;
+    text-decoration: none;
+    text-align: center;
+    font-size: 20px;
+}
+
+ul li ul.dropdown li {
+    display: block;
+}
+
+ul li ul.dropdown {
+    width: 100%;
+    background: #22438C;
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
+
+ul li a:hover {
+    background: #112C66;
+}
+
+ul li:hover ul.dropdown {
+    display: block;
+}
